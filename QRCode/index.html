@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript" src="js/jquery-1.8.3.min.js" ></script>
+		<script type="text/javascript" src="js/jquery.qrcode.js" ></script>
+        <script type="text/javascript" src="js/qrcode.js" ></script> 
+        <script type="text/javascript" src="js/utf.js" ></script>
+		 <p>Render in table</p>
+		 <div id="qrcodeTable"></div>
+		 <p>Render in canvas</p>
+		 <div id="qrcodeCanvas"></div>
+		 <script> 
+		    jQuery('#qrcodeTable').qrcode({
+		         render    : "table",                <!--二维码生成方式 -->
+		         text    : "http://www.baidu.com" , <!-- 二维码内容  -->
+		         width : "200",               //二维码的宽度
+                 height : "200",
+		     });    
+		     jQuery('#qrcodeCanvas').qrcode({
+		     	 render    : "canvas",
+		         text    : "http://www.baidu.com",
+		         width : "200",               //二维码的宽度
+                 height : "200",              //二维码的高度
+                 background : "#ffffff",       //二维码的后景色
+                 foreground : "#000000",        //二维码的前景色
+                 src: 'img/gray.jpg'             //二维码中间的图片
+		     });    
+		 </script>
+		 </body>
+</html>
